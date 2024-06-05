@@ -25,7 +25,8 @@ End:
     hlt // hlt instruction placess the processor in halt state
     jmp End  // if interrupt will resume execution so if interrupt is fired the processor will run the instruction following hlt which is jump to End means infinite loop
 
-Message:    db "Ajeet"
-MessageLen: equ $-Message
+Message:    db "Ajeet"  // db(define bytes)
+MessageLen: equ $-Message // equ is used to assign a name to value
+
 
 
