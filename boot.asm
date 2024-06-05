@@ -20,5 +20,9 @@ printMessage;
     mov bp,Message  // bp(stack base pointer general purpose register is used to point base of the stack) is used to point start of the message
     mov cx,MessageLen   // cx(counter register) is used to determine the length of the string to be displayed
     int 0x10    // call BIOS interrupt
+
+End:
+    hlt // hlt instruction placess the processor in halt state
+    jmp End  // if interrupt will resume execution so if interrupt is fired the processor will run the instruction following hlt which is jump to End means infinite loop
     
 
